@@ -1,3 +1,0 @@
-Airplane,Bicycle,Car,
-Truck,Bus,Bus,
-Taxi,Taxi,Parking meter,

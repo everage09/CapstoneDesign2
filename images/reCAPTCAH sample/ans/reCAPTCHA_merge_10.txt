@@ -1,3 +1,0 @@
-Traffic sign,Bus,Motorcycle,
-Bicycle,Taxi,Ambulance,
-Helicopter,Bicycle,Bus,

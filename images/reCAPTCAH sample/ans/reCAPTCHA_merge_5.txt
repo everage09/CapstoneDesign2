@@ -1,3 +1,0 @@
-Parking meter,Bus,Traffic sign,
-Airplane,Parking meter,Helicopter,
-Airplane,Airplane,Traffic sign,

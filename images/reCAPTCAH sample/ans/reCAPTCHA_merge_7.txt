@@ -1,3 +1,0 @@
-Parking meter,Bicycle,Bus,
-Taxi,Traffic sign,Bus,
-Taxi,Fire hydrant,Stop sign,
