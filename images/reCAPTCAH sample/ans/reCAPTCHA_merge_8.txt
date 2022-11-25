@@ -1,0 +1,3 @@
+Stop sign,Truck,Motorcycle,
+Airplane,Taxi,Fire hydrant,
+Bus,Traffic sign,Car,

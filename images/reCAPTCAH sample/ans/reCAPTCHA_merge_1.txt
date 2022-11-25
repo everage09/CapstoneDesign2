@@ -1,0 +1,3 @@
+Parking meter,Taxi,Parking meter,
+Fire hydrant,Traffic sign,Fire hydrant,
+Fire hydrant,Bus,Airplane,
