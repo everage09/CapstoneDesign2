@@ -1,0 +1,3 @@
+Airplane,Parking meter,Parking meter,
+Truck,Ambulance,Bicycle,
+Helicopter,Truck,Motorcycle,

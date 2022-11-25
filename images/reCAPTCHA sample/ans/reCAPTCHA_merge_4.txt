@@ -1,0 +1,3 @@
+Traffic sign,Helicopter,Taxi,
+Car,Parking meter,Stop sign,
+Motorcycle,Truck,Bus,
