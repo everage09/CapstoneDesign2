@@ -61,43 +61,35 @@ Google의 reCAPTCHA는 NxN 사이즈의 그리드 형식으로 구성된 이미�
 
 
 ## Sample Output:
-초록색 테두리는 예측 결과가 Target으로 판단한 셀이고,<br>
-노란색 테두리는 Target이 예측 결과 top-3값 안에 들어가는 경우로, Target일 수도 있는 셀입니다. <br>
-빨간색 테두리는 Target이 없다고 판단한 경우 입니다.
+이미지 셀 예측 결과가 찾는 Target일 경우, 셀 주변에 초록색 테두리를 그리고, 초록색 체크 이미지로 표시합니다.<br>
+이미지 셀 예측 결과 Top-3에  찾는 Target이 포함된 경우, 셀 주변에 노란색 테두리를 그리고, 노란색 체크 이미지로 표시합니다.
+
+CAPTCHA 해독에 성공한 경우, 이미지 전체에 초록색 테두리를 그립니다.<br>
+CAPTCHA 해독에 실패한 경우, 이미지 전체에 빨간색 테두리를 그립니다.
 * * *
 ### 2X2 크기의 reCAPTCHA 해독 결과 샘플
-#### Truck &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Airplane
-#### Helicopter |&nbsp;Bus
-
-<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/2x2/0_reCAPTCHA_merge_10_target_Ambulance_.jpg?raw=true" width="300px" height="300px" title="sample 2x2" alt="2x2_1"> <img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/2x2/0_reCAPTCHA_merge_10_target_Airplane_.jpg?raw=true" width="300px" height="300px" title="sample 2x2" alt="2x2_2"><br/>
-Target: Ambulance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Target: Airplane
+<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/2x2/1_reCAPTCHA_merge_1_target_Taxi_.jpg?raw=true" width="300px" height="300px" title="sample 2x2" alt="2x2_1"> <img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/2x2/14_reCAPTCHA_merge_110_target_Airplane_.jpg?raw=true" width="300px" height="300px" title="sample 2x2" alt="2x2_2"><br/>
+Target: Taxi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Target: Airplane
 
 
-<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/2x2/0_reCAPTCHA_merge_10_target_Fire%20hydrant_.jpg?raw=true" width="300px" height="300px" title="sample 2x2" alt="2x2_3"></img> <img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/2x2/0_reCAPTCHA_merge_10_target_Helicopter_.jpg?raw=true" width="300px" height="300px" title="sample 2x2" alt="2x2_4"></img><br/>
-Target: Fire hydrant &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Target: Helicopter
+<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/2x2/122_reCAPTCHA_merge_28_target_Stop%20sign_.jpg?raw=true" width="300px" height="300px" title="sample 2x2" alt="2x2_3"></img> <img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/2x2/145_reCAPTCHA_merge_49_target_Ambulance_.jpg?raw=true" width="300px" height="300px" title="sample 2x2" alt="2x2_4"></img><br/>
+Target: Stop sign &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Target: Ambulance
 
 * * *
 ### 3X3 크기의 reCAPTCHA 해독 결과 샘플
-#### Truck &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Parking meter &nbsp;&nbsp; | Ambulance
-#### Helicopter | Truck &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Bus
-#### Car &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Airplane &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Ambulance
-<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/3x3/0_reCAPTCHA_merge_5_target_Bus_.jpg?raw=true" width="300px" height="300px" title="sample 3x3" alt="3x3_1"></img> <img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/3x3/0_reCAPTCHA_merge_5_target_Helicopter_.jpg?raw=true" width="300px" height="300px" title="sample 3x3" alt="3x3_2"></img></br>
-Target: Bus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Target: Helicopter
+<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/3x3/5_reCAPTCHA_merge_102_target_Bicycle_.jpg?raw=true" width="300px" height="300px" title="sample 3x3" alt="3x3_1"></img> <img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/3x3/8_reCAPTCHA_merge_105_target_Airplane_.jpg?raw=true" width="300px" height="300px" title="sample 3x3" alt="3x3_2"></img></br>
+Target: Bicycle &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Target: Airplane
 
-<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/3x3/0_reCAPTCHA_merge_5_target_Stop%20sign_.jpg?raw=true" width="300px" height="300px" title="sample 3x3" alt="3x3_3"></img></br>
+<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/3x3/10_reCAPTCHA_merge_107_target_Stop%20sign_.jpg?raw=true" width="300px" height="300px" title="sample 3x3" alt="3x3_3"></img></br>
 Target: Stop sign
 
 * * *
 ### 4X4 크기의 reCAPTCHA 해독 결과 샘플
-#### Traffic sign &nbsp;&nbsp;| Truck | Traffic sign &nbsp;&nbsp;&nbsp;&nbsp;| Ambulance 
-#### Fire hydrant &nbsp;| Car &nbsp;&nbsp;&nbsp;| Stop sign &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Fire hydrant
-#### Helicopter &nbsp;&nbsp;&nbsp;&nbsp;| Bus &nbsp;&nbsp;| Parking meter | Stop sign
-#### Bus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Bus &nbsp;&nbsp;| Airplane &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Airplane
-<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/4x4/0_reCAPTCHA_merge_100_target_Bus_.jpg?raw=true" width="300px" height="300px" title="sample 4x4" alt="4x4_1"> <img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/4x4/0_reCAPTCHA_merge_100_target_Stop%20sign_.jpg?raw=true" width="300px" height="300px" title="sample 4x4" alt="4x4_2"><br>
-Target: Bus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Target: Stop sign
+<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/4x4/9_reCAPTCHA_merge_106_target_Stop%20sign_.jpg?raw=true" width="300px" height="300px" title="sample 4x4" alt="4x4_1"> <img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/4x4/60_reCAPTCHA_merge_152_target_Airplane_.jpg?raw=true" width="300px" height="300px" title="sample 4x4" alt="4x4_2"><br>
+Target: Stop sign&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Target: Airplane
 
-<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/4x4/0_reCAPTCHA_merge_100_target_Motorcycle_.jpg?raw=true" width="300px" height="300px" title="sample 4x4" alt="4x4_3"></br>
-Target: Motorcycle
+<img src="https://github.com/everage09/CapstoneDesign2/blob/main/images/result%20sample/4x4/44_reCAPTCHA_merge_138_target_Truck_.jpg?raw=true" width="300px" height="300px" title="sample 4x4" alt="4x4_3"></br>
+Target: Truck
 * * *
 
 ## Algorithm
@@ -185,7 +177,7 @@ Pytorch Dataset 클래스를 상속받아 만든 커스텀 데이터셋 클래�
         img_path = image_info[1][0]
         
         # draw border lines
-        draw_line(image, target, pred, top3, size, captcha_size, patch_size, idx+1, img_path, save_dir, show_result=False)
+        draw_line(image, target, pred, top3, size, captcha_size, patch_size, idx+1, img_path, save_dir, is_correct, show_result=False)
 
 데이터로더를 통해 커스텀 데이터셋으로부터 다음 데이터를 받아오고, 랜덤하게 Target을 정해주고 예측을 실행합니다.
 훈련시킨 image classification 모델을 통해 찾고자 하는 Target이 있는 셀의 인덱스를 찾습니다.
@@ -215,7 +207,11 @@ used model based on Resnext101
 2. 모델이 NxN개의 셀을 판독하는 동안 Target이 있는 셀을 다 못 찾거나 다른 셀을 오판할 때도 오답이 된다는 점.
 3. CAPTCHA solving의 난이도가 셀의 개수에 비례하여 높아지는 점.
 을 들어 분석하였고, 이를 극복하기 위해 진행했던 노력들을 기술하였습니다.
+4. 시각화 개선을 위한 Output 이미지 생성 방식 일부 변경 
+> - CAPTCHA 해독 성공/실패 여부를 바깥 테두리로 표시. (Sample Output 항목에 기재)<br>
+> - 각 셀 마다 테두리 표시 이외에도 체크 표시 이미지를 삽입.
 
+#### 기타 다른점 
 + 그리드 축소
 + Thresholding 및 ROC 커브를 통한 최적 threshold 찾기
 + Data augmentation 및 train parameter 조정
@@ -240,6 +236,8 @@ task의 난이도가 상당히 높음을 알 수 있었습니다.
 
 더 나은 수준의 결과를 위해서는 더 정밀한 분류 모델을 구축할 필요가 있을 것으로 보이며, 이를 위해서는 대용량의 학습데이터와
 장시간의 학습이 필요할 것으로 보입니다. 
+
+또한 학습된 class에 대해서만 분류가 가능하고, 학습 class의 개수를 무한정 늘릴 수 없다는 것은 기계학습을 통한 접근의 명확한 한계점으로 보입니다.
 
 Image classification을 활용하는 방법 외에는 Object detection을 활용하는 방법이 있을 것으로 보입니다. 
 한 셀에 여러 물체가 있을 경우 Image classification의 정확도가 떨어지는 경우가 있었는데, Object detection을 활용하면, Target이
